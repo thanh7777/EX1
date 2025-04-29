@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đức Thành Web Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #000;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #333;
+            color: white;
+            border: none;
+        }
+        form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Đức Thành Web Design</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('home'); return false;">Trang chủ</a>
+        <a href="#" onclick="showSection('info'); return false;">Thông tin</a>
+        <a href="#" onclick="showSection('service'); return false;">Dịch vụ</a>
+    </nav>
+
+    <div class="container">
+        <div id="home" class="content-section active">
+            <h2>Thiết kế website chuyên nghiệp</h2>
+            <p>Chúng tôi cung cấp các dịch vụ thiết kế website chuyên nghiệp, giá cả hợp lý theo yêu cầu khách hàng.</p>
+
+            <h3>Đăng ký để nhận thông báo mới từ chúng tôi</h3>
+            <form action="#">
+                <input type="email" placeholder="Nhập Email..." required>
+                <button type="submit">Đăng ký</button>
+            </form>
+
+            <h3>Ngôn ngữ HTML5</h3>
+            <p>HTML5 là ngôn ngữ mới của trang web hiện đại.</p>
+
+            <h3>Ngôn ngữ CSS3</h3>
+            <p>CSS3 giúp tạo cấu trúc, tạo kiểu và định dạng các trang web hiện đại.</p>
+
+            <h3>Thiết kế đồ họa</h3>
+            <p>Thiết kế đồ họa là yếu tố không thể thiếu trong thiết kế website chuyên nghiệp.</p>
+        </div>
+
+        <div id="info" class="content-section">
+            <h2>Về chúng tôi</h2>
+            <p>Chúng tôi luôn lắng nghe nhu cầu khách hàng và tạo ra những giải pháp tối ưu nhất để khách hàng thành công.</p>
+            <p>Với hơn 10 năm kinh nghiệm trong thiết kế website doanh nghiệp, thương mại điện tử và marketing online.</p>
+
+            <h2>Dịch vụ của chúng tôi</h2>
+            <p>Chúng tôi cam kết cung cấp dịch vụ tin cậy, chuyên nghiệp, giá phải chăng.</p>
+
+            <p>Đức Thành Web Design, Copyright © 2025</p>
+        </div>
+
+        <div id="service" class="content-section">
+            <h2>Các dịch vụ</h2>
+            <ul>
+                <li><strong>Thiết kế Website:</strong> $1,000 - $3,000</li>
+                <li><strong>Bảo trì Website:</strong> $250 mỗi tháng</li>
+                <li><strong>Web Hosting:</strong> $25 mỗi tháng</li>
+            </ul>
+
+            <h2>Liên hệ</h2>
+            <form action="#">
+                <input type="text" placeholder="Tên" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Nội dung" rows="4" required></textarea>
+                <button type="submit">Gửi</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showSection(id) {
+            var sections = document.getElementsByClassName('content-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
